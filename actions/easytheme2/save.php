@@ -225,8 +225,6 @@ h1, h2, h3, h4, h5, h6 {
     background: 0;
 }
 
-
-
 .elgg-page-default .elgg-page-header  .elgg-inner h1{
     background-color: $et2menu;
     height: 65px;
@@ -360,7 +358,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .elgg-col-1of2 {
     width: 100%;
- }
+}
 
 .elgg-main{
     width: 100%;
@@ -399,6 +397,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px 0 2px 0;
     color: #fff;
 } 
+
 .et-nav {
     display: inline-block;
     position: absolute;
@@ -412,12 +411,34 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     background: #ccc;
     color: #fff;    
-    }
+}
 
 .elgg-menu-topbar-alt {
     display: none; 
-  }
-  
+}
+
+#profile-owner-block {
+    width: 200px;
+    float: none;
+    background-color: #EEE;
+    padding: 15px;
+}
+
+.elgg-col-1of3, .elgg-col-2of3{
+    width: 100%;
+    min-height: 0px !important; 
+}
+
+#groups-tools > li {
+width: 100%;
+}
+.groups-profile-fields {
+    width: 100%;
+}
+.groups-stats {
+    margin-bottom: 10px;
+}
+
 /* ***************************************
 	& MAX-WIDTH 481
 *************************************** */  
@@ -480,8 +501,7 @@ h1, h2, h3, h4, h5, h6 {
 .elgg-menu-site-more > li > a:hover, 
 .elgg-menu-site-more > li > a:focus {	
     background: $et2color1; 
-    color: $etmenua;
-	
+    color: $etmenua;	
 }
 
 .elgg-menu-site-more {
@@ -516,7 +536,6 @@ li.elgg-more {
     width:100px;
 }
 
-
 .et-tb-menu {
     position: absolute;
     top: -32px;
@@ -543,6 +562,16 @@ li.elgg-more {
     height: 85px;
     padding-top: 15px;
     padding-left: 20px;
+}
+
+#profile-owner-block {
+    width: 200px;
+    float: left;
+    background-color: #EEE;
+    padding: 15px;
+}
+.groups-profile-fields {
+    width: 48%;
 }
 }
 
@@ -582,8 +611,6 @@ li.elgg-more {
     margin-left: 38%;	
 }
 
-
-
 .elgg-heading-site, .elgg-heading-site:hover, .elgg-heading-site:focus{
     padding: 20px;
 }
@@ -598,6 +625,18 @@ li.elgg-more {
   
 .elgg-menu-topbar-alt {
     display: inline-block; 
+}
+.elgg-col-2of3 {
+    width: 66.66%;
+}
+
+.elgg-col-1of3 {
+    width: 33.33%;
+    min-height: 500px !important;
+}
+
+#groups-tools > li {
+width: 48%;
 }
 }
 
