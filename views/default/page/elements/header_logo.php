@@ -13,9 +13,9 @@ $site_url = elgg_get_site_url();
 <div id="topbar-toggle" class="et-tb-ddown hidden">
     <div class="elgg-inner">
 	<ul class="elgg-menu ">
-        <li class="elgg-menu-item-administration"><a href="admin" class="elgg-menu-content" style="margin-left: 20px;">Administration</a></li>
-        <li class="elgg-menu-item-usersettings"><a href="settings" class="elgg-menu-content" style="margin-left: 20px;">Settings</a></li>
-        <li class="elgg-menu-item-logout"><a href="action/logout" class="elgg-menu-content" style="margin-left: 20px;">Log out</a></li>
+        <li class="elgg-menu-item-administration"><a href="<?php echo $site_url; ?>admin" class="elgg-menu-content" style="margin-left: 20px;">Administration</a></li>
+        <li class="elgg-menu-item-usersettings"><a href="<?php echo $site_url; ?>settings" class="elgg-menu-content" style="margin-left: 20px;">Settings</a></li>
+        <li class="elgg-menu-item-logout"><a href="<?php echo $site_url; ?>action/logout" class="elgg-menu-content" style="margin-left: 20px;">Log out</a></li>
         </ul>
     </div>
 </div>
