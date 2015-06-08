@@ -15,10 +15,10 @@
 		<type>elgg_release</type>
 		<version>1.9</version>
 	</requires>
-         <requires>
+        <requires>
 		<type>plugin</type>
 		<name>custom_index</name>
-	</requires>
+        </requires>
 	<requires>
 		<type>priority</type>
 		<priority>after</priority>

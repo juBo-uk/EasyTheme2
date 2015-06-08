@@ -129,7 +129,7 @@ img {
     padding-right: 10px;
 }
 .elgg-menu-site-more > li > a:hover, .elgg-menu-site-more > li > a:focus {
-    background: #ccc;
+    background: $et2menu2 !important;
     color: #fff;
 }
 .elgg-menu-site-default > .elgg-state-selected > a, .elgg-menu-site-default > li:hover > a {
@@ -256,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: -24px;
 }
 .elgg-page-header .elgg-search {
-    margin-top: -27px;
+    margin-top: $et2search;
     margin-bottom: 2px;
     margin-right: 0px;
     height: 23px;
