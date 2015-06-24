@@ -37,7 +37,7 @@ $site_url = elgg_get_site_url();
 	<?php echo $site_name; ?>
     </a>
 </h1>
-<img style="width: 100%; height: auto;" src="<?php echo elgg_get_site_url(); ?>mod/easytheme2/graphics/headimg.jpg" />
+<img class="et2headerimg" style="width: 100%; height: auto;" src="<?php echo elgg_get_site_url(); ?>mod/easytheme2/graphics/headimg.jpg" />
 
 
 

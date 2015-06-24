@@ -65,6 +65,7 @@ $et2menu1 = elgg_get_plugin_setting('et2menu1','easytheme2');
 $et2menu2 = elgg_get_plugin_setting('et2menu2','easytheme2');
 $et2textleft = elgg_get_plugin_setting('et2textleft','easytheme2');
 $et2textright = elgg_get_plugin_setting('et2textright','easytheme2');
+$et2forms = elgg_get_plugin_setting('et2forms','easytheme2');
 //this bit writes the file...
 $file = elgg_get_data_path() . "easytheme2/cssinc.php";
 $fileHandle = fopen($file, 'w') or die("Error opening file");
@@ -187,16 +188,19 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     border: 0;
     max-width: 1238px;  
+    background-color: $et2menu;
+    height: 125px;
 }
 .elgg-page-header {
     background: 0;
     padding: 0px 0px;   
 }
-.elgg-page-default .elgg-page-header  .elgg-inner h1{
+.elgg-page-default .elgg-page-header .elgg-inner h1{
     background-color: $et2menu;
     height: 65px;
     padding-top: 15px;
     padding-left: 20px;
+    
 }
 .elgg-page-default {
     width: 99%;
@@ -249,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px 0;
     border-top: 0px solid #dedede;	
 }
-.elgg-page-default .elgg-page-header  .elgg-inner img{
+.et2headerimg{
     display: inline-block;
     max-height: 0px;
     border-bottom: 49px solid #eee;
@@ -504,7 +508,7 @@ li.elgg-more {
     width: 210px;
     margin: 0px 0px 0px 10px;
 }
-.elgg-page-default .elgg-page-header  .elgg-inner img{
+.et2headerimg{
     display: inline-block;
     max-height: 800px;
     border-bottom: 49px solid #eee;

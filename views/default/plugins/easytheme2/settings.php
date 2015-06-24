@@ -57,9 +57,26 @@ echo elgg_view('input/text', array(     'name' => 'params[et2menua]',
 <br /><br /><h2>[3] The page background image</h2> 
 <img  style="padding: 5px; border: 1px dashed #000; margin: 20px;" src="<?php echo elgg_get_site_url();?>mod/easytheme2/graphics/bkgr.jpg" alt="" />
 <br />The background image is found here: <strong>'mod/easytheme2/graphics/bkgr.jpg'</strong>. Replace this image with a repeating image of your choice - any size - Remember to name your image <strong> 'bkgr.jpg'</strong>.</em></p><br />  
-                                                                                                                
+<br /><h2>[4] Forms</h2><br />                                                                                                            
+<?php
+echo '<div>';
+echo 'Show <strong>Log In</strong> and <strong>Register Forms</strong> on the front page?';
+echo ' ';
+echo elgg_view('input/select', array(
+	'name' => 'params[et2forms]',
+	'options_values' => array(
+		'no' => elgg_echo('option:no'),
+		'yes' => elgg_echo('option:yes')
+	),
+	'value' => $vars['entity']->et2forms,
+));
+echo '</div>';
+?>
 
-<br /><br /><h2>[4] The Front Page Text Areas</h2> 
+
+
+
+<br /><br /><h2>[5] The Front Page Text Areas</h2> 
 <?php
 
 
@@ -98,7 +115,7 @@ echo elgg_view('input/longtext', array( 'name' => 'params[et2textright]',
                                         
 
 
-echo "<br /><br /><h2>[5] The Search Box </h2><br /><p> You might need to move the search box up or down <em>(Theme default = -27px)</em></p> ";          
+echo "<br /><br /><h2>[6] The Search Box </h2><br /><p> You might need to move the search box up or down <em>(Theme default = -27px)</em></p> ";          
 
 	if(empty($vars['entity']->et2search)){
 	$vars['entity']->et2search = "-27px";
@@ -112,7 +129,7 @@ echo elgg_view('input/text', array(     'name' => 'params[et2search]',
                                      
 
                                         
-echo "<br /><br /><h2>[6] Heading and Link Colours</h2><br /><p>Link Colour (1) <em>(Theme default = #38599e)</em></p> ";   
+echo "<br /><br /><h2>[7] Heading and Link Colours</h2><br /><p>Link Colour (1) <em>(Theme default = #38599e)</em></p> ";   
 
 	if(empty($vars['entity']->et2color1)){
 	$vars['entity']->et2color1 = "#38599e";
@@ -137,7 +154,7 @@ echo elgg_view('input/text', array(     'name' => 'params[et2color2]',
                                    
 
                                   
-echo "<br /><br /><h2>[7] Footer</h2><br /><p>Footer :: height <em>(Theme default = 100px)</em></p> ";    
+echo "<br /><br /><h2>[8] Footer</h2><br /><p>Footer :: height <em>(Theme default = 100px)</em></p> ";    
 
 	if(empty($vars['entity']->et2footh)){
 	$vars['entity']->et2footh = "100px";

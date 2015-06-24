@@ -8,7 +8,7 @@
  */
 
 $mod_params = array('class' => 'elgg-module-highlight');
-
+$et2forms = elgg_get_plugin_setting('et2forms','easytheme2');
 ?>
 
 <div class="custom-index elgg-main elgg-grid clearfix" style="max-width: 100%; ">
@@ -23,7 +23,7 @@ $mod_params = array('class' => 'elgg-module-highlight');
 // left column
 
 // Top box for login or welcome message
-if (!elgg_is_logged_in()) {
+if (!elgg_is_logged_in() && $et2forms == 'yes') {
 	$top_box = $vars['login'];
 	echo elgg_view_module('et-login',  '', $top_box, $mod_params);
 } 
@@ -51,7 +51,7 @@ echo elgg_view("index/lefthandside");
 
 // a view for plugins to extend
 echo elgg_view("index/righthandside");
-if (!elgg_is_logged_in()) {
+if (!elgg_is_logged_in() && $et2forms == 'yes') {
 echo "<div class='et-register'>";
 echo "<h3>Register</h3>";
 echo elgg_view_form('register');
