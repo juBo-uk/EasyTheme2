@@ -71,25 +71,25 @@ echo"</div>";
 
 
 // members
-echo elgg_view_module('featured',  elgg_echo("custom:members"), $vars['members'], $mod_params);
+echo elgg_view_module('etfeatured',  elgg_echo("custom:members"), $vars['members'], $mod_params);
 
 // blogs
 if (elgg_is_active_plugin('blog')) {
-	echo elgg_view_module('featured',  elgg_echo("custom:blogs"), $vars['blogs'], $mod_params);
+	echo elgg_view_module('etfeatured',  elgg_echo("custom:blogs"), $vars['blogs'], $mod_params);
 }
 // groups
 if (elgg_is_active_plugin('groups')) {
-	echo elgg_view_module('featured',  elgg_echo("custom:groups"), $vars['groups'], $mod_params);
+	echo elgg_view_module('etfeatured',  elgg_echo("custom:groups"), $vars['groups'], $mod_params);
 }
 
 // bookmarks
 //if (elgg_is_active_plugin('bookmarks')) {
-//	echo elgg_view_module('featured',  elgg_echo("custom:bookmarks"), $vars['bookmarks'], $mod_params);
+//	echo elgg_view_module('etfeatured',  elgg_echo("custom:bookmarks"), $vars['bookmarks'], $mod_params);
 //}
 
 // files
 //if (elgg_is_active_plugin('file')) {
-//	echo elgg_view_module('featured',  elgg_echo("custom:files"), $vars['files'], $mod_params);
+//	echo elgg_view_module('etfeatured',  elgg_echo("custom:files"), $vars['files'], $mod_params);
 //}
 
 ?>

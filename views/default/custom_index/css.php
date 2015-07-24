@@ -26,18 +26,33 @@ $et2mod = elgg_get_plugin_setting('et2menu','easytheme2');
     padding: 10px;
     background-color: <?php echo $et2mod; ?>;
     }
-.elgg-module-featured > .elgg-body{
+    
+ .elgg-module-etfeatured {
+    float: left;
+    width: 100%;
+    min-height: 200px;	
+    border: 1px solid <?php echo $et2mod; ?>;	
+    margin-right: 10px;
+    border-radius: 0;
+    }
+.elgg-module-etfeatured  .elgg-head {
+    padding: 10px;
+    background-color: <?php echo $et2mod; ?>;
+    }   
+    
+    
+.elgg-module-etfeatured > .elgg-body{
     padding: 0px;
     padding-bottom: 10px;
     }
-.elgg-module-featured > .elgg-body h3{
+.elgg-module-etfeatured > .elgg-head h3{
     color: #fff;
     }
-.elgg-module-featured > .elgg-body h2 {
+.elgg-module-etfeatured > .elgg-body h2 {
     padding: 10px;
     padding-bottom: 0px;
     }
-.elgg-module-featured > .elgg-body .elgg-list {
+.elgg-module-etfeatured > .elgg-body .elgg-list {
     border-top: 0;
     }
 .custom-index .elgg-form-login {	
@@ -155,7 +170,7 @@ $et2mod = elgg_get_plugin_setting('et2menu','easytheme2');
 }
 }
 @media only screen and (min-width: 768px) {
-.elgg-module-featured {
+.elgg-module-etfeatured {
     float: left;
     width: 31%;
     min-height: 200px;	
