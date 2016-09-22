@@ -35,11 +35,20 @@ $site_url = elgg_get_site_url();
 <h1>
     <a class="elgg-heading-site" href="<?php echo $site_url; ?>">
 	<?php echo $site_name; ?>
-    </a>
+    </a> 
 </h1>
+  <?php 
+    $whereami = elgg_get_context(); 
+    if ($whereami == 'front'):
+    ?>
 <img class="et2headerimg" style="width: 100%; height: auto;" src="<?php echo elgg_get_site_url(); ?>mod/easytheme2/graphics/headimg.jpg" />
-
-
+<?php
+else:
+?>
+<img class="et2headerimg" style="width: 100%; height: auto;" src="<?php echo elgg_get_site_url(); ?>mod/easytheme2/graphics/headinner.jpg" />
+<?php
+endif;
+?>
 
 
 

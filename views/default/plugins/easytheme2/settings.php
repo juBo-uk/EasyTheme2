@@ -1,10 +1,15 @@
 <p class='et-admin-red'><strong>You need to complete this form, and 'SAVE', before EasyTheme is ready to use.</strong></p>
 
-<h2>[1] Header Image</h2><br />
+<h2>[1a] Header Image ~ Front Page</h2><br />
 <img  style="width:100%; height: auto; padding: 5px; border: 1px dashed #000;" src="<?php echo elgg_get_site_url();?>mod/easytheme2/graphics/headimg.jpg" alt="" />	
 
 
 <p>First choose your <strong>HEADER IMAGE</strong> and save it as headimg.jpg in 'mod/easytheme2/graphics'. <em> You need to choose your image carefully - make sure it is the right width and height for the header of your page.</em></p><p><strong>For EasyTheme 2.0 your image needs to be 1240px wide - and 370px high</strong></p> 
+<h2>[1b] Header Image ~ Inner Pages</h2><br />
+<img  style="width:100%; height: auto; padding: 5px; border: 1px dashed #000;" src="<?php echo elgg_get_site_url();?>mod/easytheme2/graphics/headinner.jpg" alt="" />	
+
+
+<p>First choose your <strong>HEADER IMAGE</strong> and save it as headinner.jpg in 'mod/easytheme2/graphics'. <em> You need to choose your image carefully - make sure it is the right width for the header of your page.</em></p><p><strong>For EasyTheme 2.0 your image needs to be 1240px wide</strong></p> 
 
 <h2>[2] Menu Bar</h2><br />
 <img style="padding: 5px; border: 1px dashed #000;" src="<?php echo elgg_get_site_url();?>mod/easytheme2/graphics/header.png" alt="" />	
@@ -84,10 +89,11 @@ echo '</div>';
 echo "<br /><p><strong>Short Site Introduction</strong> Write a short, 2 line, introduction to your site - <em>(This will appear at the top of the custom index page.  Be careful to copy/paste from a text file - otherwise it's easy to paste unwanted mark-up into the box.)</em></p>";
 
 $myFile = elgg_get_data_path() . "easytheme2/intro.php";
+if (file_exists($myFile)) {
 $fh = fopen($myFile, 'r');
 $et2introfile = fread($fh, filesize($myFile));
 fclose($fh);
-
+}
 echo elgg_view('input/longtext', array( 'name' => 'params[et2intro]', 
                                         'value' => $et2introfile,
                                         'class' => 'easytheme2', ) ); 
@@ -95,20 +101,22 @@ echo elgg_view('input/longtext', array( 'name' => 'params[et2intro]',
                                         
 echo "<br /><br /><p><strong>Full Site Introduction Text.</strong> Left Hand side.</p>";
 $myFile = elgg_get_data_path() . "easytheme2/textleft.php";
+if (file_exists($myFile)) {
 $fh2 = fopen($myFile, 'r');
 $et2txtl = fread($fh2, filesize($myFile));
 fclose($fh2);
-
+}
 echo elgg_view('input/longtext', array( 'name' => 'params[et2textleft]', 
                                         'value' => $et2txtl,
                                         'class' => 'easytheme2', ) ); 
                                         
 echo "<br /><br /><p><strong>Full Site Introduction Text.</strong> Right Hand side.</p>";
 $myFile = elgg_get_data_path() . "easytheme2/textright.php";
+if (file_exists($myFile)) {
 $fh3 = fopen($myFile, 'r');
 $et2txtr = fread($fh3, filesize($myFile));
 fclose($fh3);
-
+}
 echo elgg_view('input/longtext', array( 'name' => 'params[et2textright]', 
                                         'value' => $et2txtr,
                                         'class' => 'easytheme2', ) ); 
@@ -213,4 +221,4 @@ echo elgg_view('input/text', array(     'name' => 'params[et2foothov]',
 
 
 
-echo"<br /><p class='et-admin-red'><strong>Now save your settings.</strong></p>";
+echo"<br /><br /><p class='et-admin-red'><strong>Now save your settings.</strong></p>";

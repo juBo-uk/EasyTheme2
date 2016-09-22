@@ -66,6 +66,8 @@ $et2menu2 = elgg_get_plugin_setting('et2menu2','easytheme2');
 $et2textleft = elgg_get_plugin_setting('et2textleft','easytheme2');
 $et2textright = elgg_get_plugin_setting('et2textright','easytheme2');
 $et2forms = elgg_get_plugin_setting('et2forms','easytheme2');
+$et2mod = elgg_get_plugin_setting('et2menu','easytheme2');
+
 //this bit writes the file...
 $file = elgg_get_data_path() . "easytheme2/cssinc.php";
 $fileHandle = fopen($file, 'w') or die("Error opening file");
@@ -76,6 +78,8 @@ $data = "html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+
 body {
     background: $et2_bkimg;
 }
@@ -94,59 +98,7 @@ img {
     color: $et2color1;
     text-decoration: underline;
 }
-/* ***************************************
-	SITE MENU 
-*************************************** */
-.elgg-menu-site-default {	
-    display: none;
-}
-.et-site-menu li.elgg-more > a{
-    color: #333;
-    margin-left: 0px;
-    margin-top: 8px;
-    font-size: 2em;
-    border-bottom: 0px;
-    pointer-events: none;
-    cursor: default;
-}
-.et-site-menu li.elgg-more:hover {
-    margin-top: 8px;
-}
-.et-site-menu .elgg-menu-site-more {
-    width: 250px;
-    margin-left: -20px;
-    margin-top: -15px;
-    border-radius: 0 0 0 0;
-    box-shadow: 0 0 0 0;
-}
-.et-site-menu .elgg-menu-site > li > ul {
-    border: 0px;
-    border-top: 0;    
-    min-width: 200px;
-}
-.et-site-menu .elgg-menu-site-more > li > a{
-    background: #ccc;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.elgg-menu-site-more > li > a:hover, .elgg-menu-site-more > li > a:focus {
-    background: $et2menu2 !important;
-    color: #fff;
-}
-.elgg-menu-site-default > .elgg-state-selected > a, .elgg-menu-site-default > li:hover > a {
-    border: 2px solid $et2menu2; 
-    color: $et2menu2;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    border-radius: 0;
-    margin: -2px -2px 0 -2px;  
-}
-.elgg-menu-site-more > li:last-child > a, .elgg-menu-site-more > li:last-child > a:hover {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);    
-    border-radius: 0;
-    }
-/* ***************************************
-	END SITE MENU 
-*************************************** */
+
 .elgg-menu-page a:hover {
     background-color: $et2color1; 
     color: white;
@@ -189,8 +141,8 @@ h1, h2, h3, h4, h5, h6 {
     border: 0;
     max-width: 1238px;  
     background-color: $et2menu;
-    height: 125px;
-}
+    }
+    
 .elgg-page-header {
     background: 0;
     padding: 0px 0px;   
@@ -316,6 +268,65 @@ h1, h2, h3, h4, h5, h6 {
 .elgg-sidebar{
     width: 98%;
 }
+
+
+/* ***************************************
+	SITE MENU 
+*************************************** */
+.elgg-menu-site-default {	
+    display: none;
+}
+.et-site-menu li.elgg-more > a{
+    color: #eee;
+    margin-left: 0px;
+    margin-top: 8px;
+    font-size: 2em;
+    border-bottom: 0px;
+    pointer-events: none;
+    cursor: none;
+}
+
+
+.et-site-menu li.elgg-more:hover {
+    margin-top: 8px;
+    border-bottom: 0;
+}
+.et-site-menu .elgg-menu-site-more {
+    width: 250px;
+    margin-left: -20px;
+    margin-top: -15px;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+}
+.et-site-menu .elgg-menu-site > li > ul {
+    border: 0px;
+    border-top: 0;    
+    min-width: 200px;
+}
+.et-site-menu .elgg-menu-site-more > li > a{
+    background: #ccc;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.elgg-menu-site-more > li > a:hover, .elgg-menu-site-more > li > a:focus {
+    background: #ccc;
+    color: #fff;
+}
+.elgg-menu-site-default > .elgg-state-selected > a, .elgg-menu-site-default > li:hover > a {
+    border: 2px solid $et2menu2; 
+    color: $et2menu2;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin: -2px -2px 0 -2px;  
+}
+.elgg-menu-site-more > li:last-child > a, .elgg-menu-site-more > li:last-child > a:hover {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);    
+    border-radius: 0;
+    }
+/* ***************************************
+	END SITE MENU 
+*************************************** */
+
 .et-tb-menu { 
     position: absolute;
     top: -32px;
@@ -377,6 +388,12 @@ width: 100%;
 .groups-stats {
     margin-bottom: 10px;
 }
+.elgg-menu-topbar > li > a.elgg-topbar-avatar {
+    width: 28px;
+    height: 28px;
+    margin-top: -5px;
+    
+}
 /* ***************************************
 	& MAX-WIDTH 481
 *************************************** */  
@@ -414,6 +431,9 @@ width: 100%;
     border: 0;
     border-bottom: 2px solid #fff; 
 }  
+.elgg-menu-site-default{
+display: none;
+}
 }
 /* ***************************************
 	481 & UP
@@ -444,6 +464,7 @@ width: 100%;
     top: 75px;
     height: 45px;
     margin-left: 2px;    
+    min-width: 500px;
 }
 .elgg-menu-topbar > li > a{
     color: $et2menua;
@@ -514,11 +535,7 @@ li.elgg-more {
     border-bottom: 49px solid #eee;
     margin-bottom: -24px;
 }
-.elgg-menu-site-default {	
-    top: 37px;	
-    height: 45px;	
-    margin-left: 38%;	
-}
+
 .elgg-heading-site, .elgg-heading-site:hover, .elgg-heading-site:focus{
     padding: 20px;
 }
@@ -541,26 +558,28 @@ li.elgg-more {
 #groups-tools > li {
 width: 48%;
 }
+
+
+.elgg-menu-site-default {
+    
+    height: 45px;
+    position: relative;
+    float: right;
+    top: 37px;
+}
+
 }
 /* ***************************************
 	1024 & UP
 *************************************** */
 @media only screen and (min-width: 1024px) {
-.elgg-menu-site-default {	
-    top: 37px;	
-    height: 45px;	
-    margin-left: 53%;	
-}
+	
+
 }
 /* ***************************************
 	1240 & UP
 *************************************** */
 @media only screen and (min-width: 1240px) {
-.elgg-menu-site-default {	
-    top: 37px;	
-    height: 45px;	
-    margin-left: 61%;	
-}	
 }";
 
 
